@@ -1,7 +1,7 @@
 import React from 'react'
 import Table from './common/Table'
 import { ColumnsType } from 'antd/es/table'
-import { data } from '../Constants/customer'
+import { data } from '../dataMocks/customer'
 
 const Components = () => {
   const columns: ColumnsType<object> = [
