@@ -1,5 +1,5 @@
 import React from 'react'
-import AddCustomer from '../pages/customer/components/AddCustomer'
+import AddCustomer from '@/views/pages/customer/components/AddCustomer'
 
 const Components = () => {
   return (
