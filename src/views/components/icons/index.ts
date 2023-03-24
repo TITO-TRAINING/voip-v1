@@ -1,6 +1,0 @@
-export { default as Search } from './Search'
-export { default as Clear } from './Clear'
-export { default as Camera } from './Camera'
-export { default as AvatarGender } from './AvatarGender'
-export { default as Vector } from './Vector'
-export { default as Calendar } from './Calendar'
