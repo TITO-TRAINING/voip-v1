@@ -28,10 +28,17 @@ const empty = styled.div`
       border: 1px solid ${(props) => props.theme.palette.primary.blue[400]};
       font-size: 14px;
       min-height: 34px;
+      &:hover {
+        background-color: ${(props) => props.theme.palette.primary.blue[50]};
+      }
     }
     .add {
       font-size: 14px;
       min-height: 34px;
+      &:hover {
+        background-color: ${(props) => props.theme.palette.primary.blue[300]};
+        color: ${({ theme }) => theme.palette.common.white};
+      }
     }
   }
   .empty__right--title {
