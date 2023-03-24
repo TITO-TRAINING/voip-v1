@@ -1,6 +1,6 @@
 import * as React from 'react'
 // import "./styles.scss";
-import * as S from './styles'
+import EmptyCustom from './styles'
 
 interface Iempty {
   emptyImg: string
@@ -9,7 +9,7 @@ interface Iempty {
 }
 export const Empty: React.FC<Iempty> = ({ emptyImg, children, content }) => {
   return (
-    <S.default>
+    <EmptyCustom>
       <div className='empty'>
         <figure>
           <img src={emptyImg} alt='' />
@@ -19,7 +19,7 @@ export const Empty: React.FC<Iempty> = ({ emptyImg, children, content }) => {
           <div className='buttons'>{children}</div>
         </div>
       </div>
-    </S.default>
+    </EmptyCustom>
   )
 }
 
