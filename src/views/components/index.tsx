@@ -1,7 +1,8 @@
 import React from 'react'
 import emptyImg from '@/assets/images/Client.svg'
 import Empty from './common/Empty'
-import { Add, Import } from './icons'
+import { ReactComponent as AddCustomer } from '@/assets/images/AddCustomer.svg'
+import { ReactComponent as FileImport } from '@/assets/images/FileImport.svg'
 import Button from './common/Button'
 
 const Components = () => {
@@ -18,11 +19,11 @@ const Components = () => {
         content='Quản lý danh sách khách hàng một cách dễ dàng và tiện lợi'
       >
         <Button onClick={handleImpot} className='import'>
-          <Import />
+          <FileImport />
           Thêm file từ excel
         </Button>
         <Button onClick={handleAddCustomer} className='add'>
-          <Add />
+          <AddCustomer />
           Thêm khách hàng
         </Button>
       </Empty>
