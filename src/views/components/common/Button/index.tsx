@@ -1,7 +1,7 @@
 import React, { memo, ReactNode } from 'react'
 
 // styles
-import * as S from '@/views/components/common/Button/style'
+import * as S from './style'
 
 interface ButtonProps {
   children: ReactNode

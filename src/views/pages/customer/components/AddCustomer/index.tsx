@@ -4,27 +4,32 @@ import Input from '@/views/components/common/Input'
 import TextArea from 'antd/lib/input/TextArea'
 import Button from '@/views/components/common/Button'
 import { Col, DatePicker, Form, Radio, Row, Select } from 'antd'
-import {
-  AvatarGender,
-  Calendar,
-  Camera,
-  Vector,
-} from '@/views/components/icons'
+import { Gender } from '@/views/types/gender'
+
+//icon
+import { ReactComponent as AvatarGender } from '@/assets/images/AvatarGender.svg'
+import { ReactComponent as Calendar } from '@/assets/images/Calendar.svg'
+import { ReactComponent as Camera } from '@/assets/images/Camera.svg'
+import { ReactComponent as Vector } from '@/assets/images/Vector.svg'
+
+//style
 import CustomAddCustomer from './styles'
 
 const AddCustomer: React.FC = () => {
-  // const { t } = useTranslation('customer')
   const { Option } = Select
+  const [form] = Form.useForm()
   const handleClickCancel = () => {
-    // handle button Cancel
+    // Reset the form here
+    form.resetFields()
   }
-  const handleAddCustomer = () => {
-    // handle button addCustomer
+  const handleSubmit = (values: any) => {
+    // TODO: Implement handle submit
+    console.log(values)
   }
   return (
     <CustomAddCustomer>
-      <Form layout='vertical'>
-        <div className=''>
+      <Form layout='vertical' form={form} onFinish={handleSubmit}>
+        <div>
           <Row gutter={16}>
             <Col span={4}>
               <label htmlFor='add-avatar-customer'>
@@ -62,9 +67,9 @@ const AddCustomer: React.FC = () => {
                   ]}
                 >
                   <Radio.Group name='radiogroup'>
-                    <Radio value={1}>Nam</Radio>
-                    <Radio value={2}>Nữ</Radio>
-                    <Radio value={3}>Khác</Radio>
+                    <Radio value={Gender.Male}>Nam</Radio>
+                    <Radio value={Gender.Female}>Nữ</Radio>
+                    <Radio value={Gender.Other}>Khác</Radio>
                   </Radio.Group>
                 </Form.Item>
               </div>
@@ -133,7 +138,7 @@ const AddCustomer: React.FC = () => {
           <Button onClick={handleClickCancel} className='cancel'>
             Huỷ
           </Button>
-          <Button onClick={handleAddCustomer} className='add-customer'>
+          <Button onClick={() => form.submit()} className='add-customer'>
             Thêm khách hàng
           </Button>
         </div>

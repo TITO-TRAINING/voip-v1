@@ -1,7 +1,8 @@
 import React, { memo, ReactNode } from 'react'
 
-// components
-import { Search, Clear } from '@/views/components/icons'
+// icon
+import { ReactComponent as Clear } from '@/assets/images/Clear.svg'
+import { ReactComponent as Search } from '@/assets/images/Clear.svg'
 
 // styles
 import * as S from './style'
