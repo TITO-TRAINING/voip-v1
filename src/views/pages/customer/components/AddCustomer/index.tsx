@@ -1,5 +1,3 @@
-import React from 'react'
-// import { useTranslation } from 'react-i18next'
 import Input from '@/views/components/common/Input'
 import TextArea from 'antd/lib/input/TextArea'
 import Button from '@/views/components/common/Button'
@@ -7,23 +5,25 @@ import { Col, DatePicker, Form, Radio, Row, Select } from 'antd'
 import { Gender } from '@/views/types/gender'
 
 //icon
-import { ReactComponent as AvatarGender } from '@/assets/images/AvatarGender.svg'
-import { ReactComponent as Calendar } from '@/assets/images/Calendar.svg'
-import { ReactComponent as Camera } from '@/assets/images/Camera.svg'
-import { ReactComponent as Vector } from '@/assets/images/Vector.svg'
+import { ReactComponent as AvatarGender } from '@/assets/icons/AvatarGender.svg'
+import { ReactComponent as Calendar } from '@/assets/icons/Calendar.svg'
+import { ReactComponent as Camera } from '@/assets/icons/Camera.svg'
+import { ReactComponent as Vector } from '@/assets/icons/Vector.svg'
 
 //style
 import CustomAddCustomer from './styles'
-
-const AddCustomer: React.FC = () => {
+import { ICustomer } from '@/views/types/customer'
+interface AddCustomerProps {
+  onClose: () => void
+}
+const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
   const { Option } = Select
   const [form] = Form.useForm()
   const handleClickCancel = () => {
-    // Reset the form here
+    onClose()
     form.resetFields()
   }
-  const handleSubmit = (values: any) => {
-    // TODO: Implement handle submit
+  const handleSubmit = (values: ICustomer) => {
     console.log(values)
   }
   return (
