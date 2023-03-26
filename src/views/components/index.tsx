@@ -1,8 +1,8 @@
 import React from 'react'
-import emptyImg from '@/assets/images/Client.svg'
+import emptyImg from '@/assets/icons/Client.svg'
 import Empty from './common/Empty'
-import { ReactComponent as AddCustomer } from '@/assets/images/AddCustomer.svg'
-import { ReactComponent as FileImport } from '@/assets/images/FileImport.svg'
+import { ReactComponent as AddCustomer } from '@/assets/icons/AddCustomer.svg'
+import { ReactComponent as FileImport } from '@/assets/icons/FileImport.svg'
 import Button from './common/Button'
 
 const Components = () => {

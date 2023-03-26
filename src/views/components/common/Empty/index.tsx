@@ -1,5 +1,4 @@
 import * as React from 'react'
-// import "./styles.scss";
 import EmptyCustom from './styles'
 
 interface Iempty {
