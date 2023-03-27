@@ -24,6 +24,7 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
     form.resetFields()
   }
   const handleSubmit = (values: ICustomer) => {
+    // TODO: Implement handle submit
     console.log(values)
   }
   return (
