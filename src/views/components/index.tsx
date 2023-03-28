@@ -4,6 +4,7 @@ import { ReactComponent as AddCustomer } from '@/assets/icons/AddCustomer.svg'
 import { ReactComponent as FileImport } from '@/assets/icons/FileImport.svg'
 import Empty from '@/components/common/Empty'
 import Button from '@/components/common/Button'
+import { Customer } from '@/constants/Customer'
 
 const Components = () => {
   const handleImport = useCallback(() => {
@@ -18,17 +19,14 @@ const Components = () => {
 
   return (
     <div>
-      <Empty
-        emptyImg={emptyImg}
-        content='Quản lý danh sách khách hàng một cách dễ dàng và tiện lợi'
-      >
+      <Empty emptyImg={emptyImg} content={Customer.desEmptyCustomer}>
         <Button onClick={handleImport} className='import'>
           <FileImport />
-          Thêm file từ excel
+          {Customer.addFiles}
         </Button>
         <Button onClick={handleAddCustomer} className='add'>
           <AddCustomer />
-          Thêm khách hàng
+          {Customer.addCustomer}
         </Button>
       </Empty>
     </div>
