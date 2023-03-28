@@ -1,12 +1,12 @@
 import * as React from 'react'
 import EmptyCustom from './styles'
 
-interface Iempty {
+interface IEmpty {
   emptyImg: string
   children: React.ReactNode
   content: string
 }
-export const Empty: React.FC<Iempty> = ({ emptyImg, children, content }) => {
+export const Empty: React.FC<IEmpty> = ({ emptyImg, children, content }) => {
   return (
     <EmptyCustom>
       <div className='empty'>

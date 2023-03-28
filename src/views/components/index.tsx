@@ -6,10 +6,12 @@ import { ReactComponent as FileImport } from '@/assets/icons/FileImport.svg'
 import Button from './common/Button'
 
 const Components = () => {
-  const handleImpot = () => {
+  const handleImport = () => {
+    //TODO: Implement handle Import excel button
     console.log('import')
   }
   const handleAddCustomer = () => {
+    //TODO: Implement handle addCustomer button
     console.log('add')
   }
   return (
@@ -18,7 +20,7 @@ const Components = () => {
         emptyImg={emptyImg}
         content='Quản lý danh sách khách hàng một cách dễ dàng và tiện lợi'
       >
-        <Button onClick={handleImpot} className='import'>
+        <Button onClick={handleImport} className='import'>
           <FileImport />
           Thêm file từ excel
         </Button>
