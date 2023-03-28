@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import emptyImg from '@/assets/icons/Client.svg'
 import { ReactComponent as AddCustomer } from '@/assets/icons/AddCustomer.svg'
 import { ReactComponent as FileImport } from '@/assets/icons/FileImport.svg'
@@ -6,14 +6,16 @@ import Empty from '@/components/common/Empty'
 import Button from '@/components/common/Button'
 
 const Components = () => {
-  const handleImport = () => {
+  const handleImport = useCallback(() => {
     //TODO: Implement handle Import excel button
     console.log('import')
-  }
-  const handleAddCustomer = () => {
+  }, [])
+
+  const handleAddCustomer = useCallback(() => {
     //TODO: Implement handle addCustomer button
     console.log('add')
-  }
+  }, [])
+
   return (
     <div>
       <Empty

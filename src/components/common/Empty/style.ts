@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const emptyCustom = styled.div`
+const EmptyCustom = styled.div`
   .empty {
     display: flex;
     flex-direction: row;
@@ -51,4 +51,4 @@ const emptyCustom = styled.div`
     line-height: 24px;
   }
 `
-export default emptyCustom
+export default EmptyCustom

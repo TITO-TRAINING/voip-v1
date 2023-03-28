@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { memo } from 'react'
 import EmptyCustom from './style'
 
 interface IEmpty {
@@ -22,4 +23,4 @@ export const Empty: React.FC<IEmpty> = ({ emptyImg, children, content }) => {
   )
 }
 
-export default Empty
+export default memo(Empty)
