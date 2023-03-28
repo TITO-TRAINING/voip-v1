@@ -60,7 +60,7 @@ const CustomAddCustomer = styled.div`
       color: ${({ theme }) => theme.palette.info.main};
     }
     .ant-select-selector input {
-      cursor: none;
+      cursor: pointer;
     }
   }
 `
