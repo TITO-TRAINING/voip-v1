@@ -29,7 +29,7 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
     // TODO: Implement handle submit
     console.log(values)
   }
-  const [isClicked, setIsClicked] = useState(false)
+  const [isClicked, setIsClicked] = useState<boolean>(false)
 
   const handleSelectClick = () => {
     setIsClicked(!isClicked)
