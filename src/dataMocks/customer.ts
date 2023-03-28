@@ -1,5 +1,5 @@
 //type
-import { Idata } from '@/views/types/table'
+import { Idata } from '@/types/table'
 
 export const data: Idata[] = [
   {
