@@ -1,7 +1,52 @@
 //type
-import { Idata } from '@/types/table'
+import { ICustomer } from '@/types/Customer'
+import { ColumnsType } from 'antd/es/table'
 
-export const data: Idata[] = [
+export const columns: ColumnsType<object> = [
+  {
+    key: 'id',
+    title: 'STT',
+    dataIndex: 'id',
+    width: '5%',
+  },
+  {
+    key: 'name',
+    title: 'Tên đầy đủ',
+    dataIndex: 'name',
+    width: '25%',
+  },
+  {
+    key: 'phoneNumber',
+    title: 'Số điện thoại',
+    dataIndex: 'phoneNumber',
+    width: '15%',
+  },
+  {
+    key: 'staff',
+    title: 'Nhân viên phụ trách',
+    dataIndex: 'staff',
+    width: '20%',
+  },
+  {
+    key: 'demand',
+    title: 'Nhu cầu',
+    dataIndex: 'demand',
+    width: '15%',
+  },
+  {
+    key: 'createdAt',
+    title: 'Ngày tạo',
+    dataIndex: 'createdAt',
+    width: '15%',
+  },
+  {
+    key: 'nullColums',
+    title: '',
+    dataIndex: 'nullColums',
+    width: '5%',
+  },
+]
+export const data: ICustomer[] = [
   {
     id: 1,
     name: 'Nguyễn Văn Thiện',
@@ -9,7 +54,6 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
   {
     id: 2,
@@ -18,7 +62,6 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
   {
     id: 3,
@@ -27,7 +70,6 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
   {
     id: 4,
@@ -36,7 +78,6 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
   {
     id: 5,
@@ -45,7 +86,6 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
   {
     id: 6,
@@ -54,7 +94,6 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
   {
     id: 7,
@@ -63,7 +102,6 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
   {
     id: 8,
@@ -72,7 +110,6 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
   {
     id: 9,
@@ -81,7 +118,6 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
   {
     id: 10,
@@ -90,6 +126,5 @@ export const data: Idata[] = [
     staff: 'Thanh Pham',
     demand: 'Tu van',
     createdAt: '21-09-2022',
-    nullColums: '123456789',
   },
 ]
