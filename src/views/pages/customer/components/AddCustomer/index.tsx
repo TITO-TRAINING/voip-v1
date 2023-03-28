@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import TextArea from 'antd/lib/input/TextArea'
 import { Col, DatePicker, Form, Radio, Row, Select } from 'antd'
 import { Gender } from '@/types/gender'
@@ -9,7 +10,7 @@ import { ICustomer } from '@/types/customer'
 import { ReactComponent as AvatarGender } from '@/assets/icons/AvatarGender.svg'
 import { ReactComponent as Calendar } from '@/assets/icons/Calendar.svg'
 import { ReactComponent as Camera } from '@/assets/icons/Camera.svg'
-import { ReactComponent as Vector } from '@/assets/icons/Vector.svg'
+import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons'
 
 //style
 import CustomAddCustomer from './styles'
@@ -19,6 +20,7 @@ interface AddCustomerProps {
 const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
   const { Option } = Select
   const [form] = Form.useForm()
+
   const handleClickCancel = () => {
     onClose()
     form.resetFields()
@@ -26,6 +28,11 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
   const handleSubmit = (values: ICustomer) => {
     // TODO: Implement handle submit
     console.log(values)
+  }
+  const [isClicked, setIsClicked] = useState(false)
+
+  const handleSelectClick = () => {
+    setIsClicked(!isClicked)
   }
   return (
     <CustomAddCustomer>
@@ -107,7 +114,7 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
           </Col>
           <Col span={12}>
             <Form.Item name='email' label='Email'>
-              <Input placeholder='Nhập email' />
+              <Input placeholder='Nhập email' type='email' />
             </Form.Item>
           </Col>
         </Row>
@@ -120,7 +127,17 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
           </Col>
           <Col span={12}>
             <Form.Item name='demand' label='Nhu cầu'>
-              <Select placeholder='Nhu cầu' suffixIcon={<Vector />}>
+              <Select
+                placeholder='Nhu cầu'
+                onClick={handleSelectClick}
+                suffixIcon={
+                  isClicked ? (
+                    <CaretDownOutlined className='caret-down' />
+                  ) : (
+                    <CaretUpOutlined className='caret-up' />
+                  )
+                }
+              >
                 <Option value='test1'>test</Option>
 
                 <Option value='test2'>test</Option>

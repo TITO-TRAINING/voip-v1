@@ -56,6 +56,12 @@ const CustomAddCustomer = styled.div`
     hr {
       border: 1px solid ${({ theme }) => theme.palette.background.disabled};
     }
+    .ant-select-arrow {
+      color: ${({ theme }) => theme.palette.info.main};
+    }
+    .ant-select-selector input {
+      cursor: none;
+    }
   }
 `
 export default CustomAddCustomer
