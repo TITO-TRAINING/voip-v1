@@ -1,5 +1,5 @@
 import * as React from 'react'
-import EmptyCustom from './styles'
+import EmptyCustom from './style'
 
 interface IEmpty {
   emptyImg: string
