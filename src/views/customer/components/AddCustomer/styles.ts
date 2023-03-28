@@ -59,8 +59,10 @@ const CustomAddCustomer = styled.div`
     .ant-select-arrow {
       color: ${({ theme }) => theme.palette.info.main};
     }
-    .ant-select-selector input {
-      cursor: pointer;
+    .ant-select-selector {
+      input {
+        cursor: pointer;
+      }
     }
   }
 `
