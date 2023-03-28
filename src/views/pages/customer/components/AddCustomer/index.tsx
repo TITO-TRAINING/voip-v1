@@ -2,7 +2,7 @@ import Input from '@/views/components/common/Input'
 import TextArea from 'antd/lib/input/TextArea'
 import Button from '@/views/components/common/Button'
 import { Col, DatePicker, Form, Radio, Row, Select } from 'antd'
-import { Gender } from '@/views/types/gender'
+import { Gender } from '@/types/gender'
 
 //icon
 import { ReactComponent as AvatarGender } from '@/assets/icons/AvatarGender.svg'
@@ -12,7 +12,7 @@ import { ReactComponent as Vector } from '@/assets/icons/Vector.svg'
 
 //style
 import CustomAddCustomer from './styles'
-import { ICustomer } from '@/views/types/customer'
+import { ICustomer } from '@/types/customer'
 interface AddCustomerProps {
   onClose: () => void
 }
