@@ -1,7 +1,10 @@
+import { memo, useCallback } from 'react'
+//component
 import Button from '@/components/common/Button'
 import Empty from '@/components/common/Empty'
+//constants
 import { Customer } from '@/constants/Customer'
-import { useCallback } from 'react'
+//icon
 import emptyImg from '@/assets/icons/Client.svg'
 import { ReactComponent as AddCustomer } from '@/assets/icons/AddCustomer.svg'
 import { ReactComponent as FileImport } from '@/assets/icons/FileImport.svg'
@@ -32,4 +35,4 @@ const EmptyCustomer = () => {
     </div>
   )
 }
-export default EmptyCustomer
+export default memo(EmptyCustomer)

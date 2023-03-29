@@ -1,5 +1,5 @@
 import React from 'react'
-import EmptyCustomer from '../customer/components/Empty'
+import EmptyCustomer from '@/views/customer/components/Empty'
 
 const Components = () => {
   return (
