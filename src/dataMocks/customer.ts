@@ -1,41 +1,42 @@
 //type
+import Table from '@/constants/Customer'
 import { ICustomer } from '@/types/Customer'
 import { ColumnsType } from 'antd/es/table'
 
 export const columns: ColumnsType<object> = [
   {
     key: 'id',
-    title: 'STT',
+    title: Table.stt,
     dataIndex: 'id',
     width: '5%',
   },
   {
     key: 'name',
-    title: 'Tên đầy đủ',
+    title: Table.name,
     dataIndex: 'name',
     width: '25%',
   },
   {
     key: 'phoneNumber',
-    title: 'Số điện thoại',
+    title: Table.phoneNumber,
     dataIndex: 'phoneNumber',
     width: '15%',
   },
   {
     key: 'staff',
-    title: 'Nhân viên phụ trách',
+    title: Table.staff,
     dataIndex: 'staff',
     width: '20%',
   },
   {
     key: 'demand',
-    title: 'Nhu cầu',
+    title: Table.demand,
     dataIndex: 'demand',
     width: '15%',
   },
   {
     key: 'createdAt',
-    title: 'Ngày tạo',
+    title: Table.createdAt,
     dataIndex: 'createdAt',
     width: '15%',
   },
