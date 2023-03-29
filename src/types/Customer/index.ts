@@ -1,4 +1,4 @@
-import { Gender } from '../gender/gender'
+import { Gender } from '@/types/gender'
 
 export interface ICustomer {
   id: number
