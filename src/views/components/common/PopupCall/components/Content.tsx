@@ -1,11 +1,11 @@
 import React, { memo } from 'react'
-import callTo from '../../../../../assets/images/callTo.svg'
-import callAway from '../../../../../assets/images/callAway.svg'
-import avatarDefault from '../../../../../assets/images/man.svg'
+import callTo from '@/assets/images/callTo.svg'
+import callAway from '@/assets/images/callAway.svg'
+import avatarDefault from '@/assets/images/man.svg'
 
 interface Props {
   type: 'call to' | 'call away'
-  name: string,
+  name: string
   avatar?: string
   phoneNumber: string
 }
@@ -29,6 +29,10 @@ const Content: React.FC<Props> = ({ type, name, avatar, phoneNumber }) => {
       </div>
     </>
   )
+}
+
+Content.defaultProps = {
+  avatar: avatarDefault,
 }
 
 export default memo(Content)
