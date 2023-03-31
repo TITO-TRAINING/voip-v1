@@ -24,12 +24,12 @@ const Components = () => {
   }, [])
 
   return (
-    <ThemeProvider theme={theme} >
+    <ThemeProvider theme={theme}>
       <PopupCall
         open={open}
         onOK={handleOK}
         onCancel={handleCancel}
-        type='call to'
+        type='call away'
         timing={timing}
         customer={FAKE_DATA}
       >

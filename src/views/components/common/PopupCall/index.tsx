@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Content from './components/Content'
 import PopupCallCustom from './style'
-import Close from '../../icons/Close'
+import { ReactComponent as Close } from '@/assets/icons/Close.svg'
 import { data } from '@/views/types/customer'
 
 interface PopupCallProps {
