@@ -1,10 +1,11 @@
 import React from 'react'
-import EmptyCustomer from '@/views/customer/components/Empty'
+import { columns, data } from '@/dataMocks/customer'
+import Table from '@/components/common/Table'
 
 const Components = () => {
   return (
     <div>
-      <EmptyCustomer />
+      <Table columns={columns} dataSource={data} />
     </div>
   )
 }
