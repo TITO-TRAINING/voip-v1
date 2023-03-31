@@ -8,7 +8,7 @@ interface Props {
   type: 'call to' | 'call away'
   onOK?: () => void
   onCancel?: () => void
-  timing?: string | null
+  timing?: string | undefined
   isConnected: boolean
 }
 
@@ -40,6 +40,12 @@ const Footer: React.FC<Props> = ({
         </>
       )
   }
+}
+
+Footer.defaultProps = {
+  onCancel: undefined,
+  onOK: undefined,
+  timing: undefined
 }
 
 export default memo(Footer)

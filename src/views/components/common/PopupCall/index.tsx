@@ -77,6 +77,7 @@ const PopupCall: React.FC<PopupCallProps> = ({
 PopupCall.defaultProps = {
   onOK: undefined,
   onCancel: undefined,
+  timing: undefined
 }
 
 export default memo(PopupCall)

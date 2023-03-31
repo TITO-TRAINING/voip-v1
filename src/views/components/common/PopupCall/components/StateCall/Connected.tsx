@@ -18,4 +18,8 @@ const Connected: React.FC<Props> = ({ onCancel }) => {
   )
 }
 
+Connected.defaultProps = {
+  onCancel: undefined
+}
+
 export default memo(Connected)
