@@ -1,5 +1,51 @@
 //type
 import { ICustomer } from '@/types/Customer'
+import { ColumnProps, ColumnsType } from 'antd/es/table'
+
+export const columns: ColumnProps<ColumnsType>[] = [
+  {
+    key: 'id',
+    title: 'table.stt',
+    dataIndex: 'id',
+    width: '5%',
+  },
+  {
+    key: 'name',
+    title: 'table.name',
+    dataIndex: 'name',
+    width: '25%',
+  },
+  {
+    key: 'phoneNumber',
+    title: 'table.phoneNumber',
+    dataIndex: 'phoneNumber',
+    width: '15%',
+  },
+  {
+    key: 'staff',
+    title: 'table.employeeSupport',
+    dataIndex: 'staff',
+    width: '20%',
+  },
+  {
+    key: 'demand',
+    title: 'table.demand',
+    dataIndex: 'demand',
+    width: '15%',
+  },
+  {
+    key: 'createdAt',
+    title: 'table.createdAt',
+    dataIndex: 'createdAt',
+    width: '15%',
+  },
+  {
+    key: 'nullColums',
+    title: '',
+    dataIndex: 'nullColums',
+    width: '5%',
+  },
+]
 
 export const data: ICustomer[] = [
   {
