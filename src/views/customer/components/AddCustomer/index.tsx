@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import TextArea from 'antd/lib/input/TextArea'
 import { Col, DatePicker, Form, Radio, Row, Select } from 'antd'
 import { Gender } from '@/types/gender'
+import { ICustomer } from '@/types/Customer'
 import Input from '@/components/common/Input'
 import Button from '@/components/common/Button'
-import { ICustomer } from '@/types/Customer'
-import { useTranslation } from 'react-i18next'
 
 //icon
 import { ReactComponent as AvatarGender } from '@/assets/icons/AvatarGender.svg'
@@ -18,15 +18,12 @@ import CustomAddCustomer from './styles'
 
 //constants
 import { OPTIONSELECT } from '@/constants/Customer'
-import en from '@/services/i18n/locales/en'
-import vi from '@/services/i18n/locales/vi'
 
 interface AddCustomerProps {
   onClose: () => void
 }
 const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
   const { t } = useTranslation('customer')
-  console.log(en, vi)
   const { Option } = Select
   const [form] = Form.useForm()
 
@@ -103,7 +100,11 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
         <Row gutter={16}>
           <Col span={12}>
             <Form.Item name='Date' label={t('addCustomers.birthday')}>
-              <DatePicker suffixIcon={<Calendar />} format='DD/MM/YYYY' />
+              <DatePicker
+                suffixIcon={<Calendar />}
+                format='DD/MM/YYYY'
+                placeholder={`${t('addCustomers.birthday')}`}
+              />
             </Form.Item>
           </Col>
           <Col span={12}>

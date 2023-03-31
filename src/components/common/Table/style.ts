@@ -17,7 +17,9 @@ const Table = styled(CustomTable)`
     }
   }
   tr.ant-table-row:hover > td {
-    background-color: ${(props) => props.theme.palette.primary.blue[50]};
+    .ant-table-cell-row-hover {
+      background-color: ${(props) => props.theme.palette.primary.blue[50]};
+    }
   }
   .ant-table-tbody > tr > td {
     border-bottom: none;
