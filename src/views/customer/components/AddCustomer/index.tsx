@@ -5,6 +5,7 @@ import { Gender } from '@/types/gender'
 import Input from '@/components/common/Input'
 import Button from '@/components/common/Button'
 import { ICustomer } from '@/types/Customer'
+import { useTranslation } from 'react-i18next'
 
 //icon
 import { ReactComponent as AvatarGender } from '@/assets/icons/AvatarGender.svg'
@@ -16,24 +17,16 @@ import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons'
 import CustomAddCustomer from './styles'
 
 //constants
-import {
-  address,
-  birthday,
-  btn,
-  demand,
-  email,
-  employeeSupport,
-  fullName,
-  gender,
-  note,
-  OPTIONSELECT,
-  phoneNumber,
-} from '@/constants/Customer'
+import { OPTIONSELECT } from '@/constants/Customer'
+import en from '@/services/i18n/locales/en'
+import vi from '@/services/i18n/locales/vi'
 
 interface AddCustomerProps {
   onClose: () => void
 }
 const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
+  const { t } = useTranslation('customer')
+  console.log(en, vi)
   const { Option } = Select
   const [form] = Form.useForm()
 
@@ -67,33 +60,39 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
             <Col span={10}>
               <Form.Item
                 name='name'
-                label={fullName.label}
+                label={t('addCustomers.fullName.label')}
                 rules={[
                   {
                     required: true,
-                    message: fullName.placeholder,
+                    message: `${t('addCustomers.fullName.placeholder')}`,
                   },
                 ]}
               >
-                <Input placeholder={fullName.placeholder} />
+                <Input placeholder={t('addCustomers.fullName.placeholder')} />
               </Form.Item>
             </Col>
             <Col span={10}>
               <div>
                 <Form.Item
                   name='gender'
-                  label={gender.title}
+                  label={t('addCustomers.gender.title')}
                   rules={[
                     {
                       required: true,
-                      message: gender.male,
+                      message: `${t('addCustomers.gender.title')}`,
                     },
                   ]}
                 >
                   <Radio.Group name='radiogroup'>
-                    <Radio value={Gender.Male}>{gender.male}</Radio>
-                    <Radio value={Gender.Female}>{gender.female}</Radio>
-                    <Radio value={Gender.Other}>{gender.other}</Radio>
+                    <Radio value={Gender.Male}>
+                      {t('addCustomers.gender.male')}
+                    </Radio>
+                    <Radio value={Gender.Female}>
+                      {t('addCustomers.gender.female')}
+                    </Radio>
+                    <Radio value={Gender.Other}>
+                      {t('addCustomers.gender.other')}
+                    </Radio>
                   </Radio.Group>
                 </Form.Item>
               </div>
@@ -103,13 +102,13 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
         <hr />
         <Row gutter={16}>
           <Col span={12}>
-            <Form.Item name='Date' label={birthday}>
-              <DatePicker suffixIcon={<Calendar />} placeholder={birthday} />
+            <Form.Item name='Date' label={t('addCustomers.birthday')}>
+              <DatePicker suffixIcon={<Calendar />} format='DD/MM/YYYY' />
             </Form.Item>
           </Col>
           <Col span={12}>
-            <Form.Item name='address' label={address.label}>
-              <Input placeholder={address.placeholder} />
+            <Form.Item name='address' label={t('addCustomers.address.label')}>
+              <Input placeholder={t('addCustomers.address.placeholder')} />
             </Form.Item>
           </Col>
         </Row>
@@ -117,34 +116,42 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
           <Col span={12}>
             <Form.Item
               name='phone_number'
-              label={phoneNumber.label}
+              label={t('addCustomers.phoneNumber.label')}
               rules={[
                 {
                   required: true,
-                  message: phoneNumber.placeholder,
+                  message: `${t('addCustomers.phoneNumber.placeholder')}`,
                 },
               ]}
             >
-              <Input placeholder={phoneNumber.placeholder} />
+              <Input placeholder={t('addCustomers.phoneNumber.placeholder')} />
             </Form.Item>
           </Col>
           <Col span={12}>
-            <Form.Item name='email' label={email.label}>
-              <Input placeholder={email.placeholder} type='email' />
+            <Form.Item name='email' label={t('addCustomers.email.label')}>
+              <Input
+                placeholder={t('addCustomers.email.placeholder')}
+                type='email'
+              />
             </Form.Item>
           </Col>
         </Row>
         <hr />
         <Row gutter={16}>
           <Col span={12}>
-            <Form.Item name='staff' label={employeeSupport.label}>
-              <Input placeholder={employeeSupport.placeholder} />
+            <Form.Item
+              name='staff'
+              label={t('addCustomers.employeeSupport.label')}
+            >
+              <Input
+                placeholder={t('addCustomers.employeeSupport.placeholder')}
+              />
             </Form.Item>
           </Col>
           <Col span={12}>
-            <Form.Item name='demand' label={demand.label}>
+            <Form.Item name='demand' label={t('addCustomers.demand.label')}>
               <Select
-                placeholder={demand.placeholder}
+                placeholder={t('addCustomers.demand.placeholder')}
                 onClick={handleSelectClick}
                 suffixIcon={
                   isClicked ? (
@@ -163,17 +170,20 @@ const AddCustomer: React.FC<AddCustomerProps> = ({ onClose }) => {
         </Row>
         <Row gutter={16}>
           <Col span={24}>
-            <Form.Item name='note' label={note.label}>
-              <TextArea rows={4} placeholder={note.placeholder} />
+            <Form.Item name='note' label={t('addCustomers.note.label')}>
+              <TextArea
+                rows={4}
+                placeholder={`${t('addCustomers.phoneNumber.placeholder')}`}
+              />
             </Form.Item>
           </Col>
         </Row>
         <div className='footer'>
           <Button onClick={handleClickCancel} className='cancel'>
-            {btn.cancel}
+            {t('addCustomers.btn.cancel')}
           </Button>
           <Button onClick={() => form.submit()} className='add-customer'>
-            {btn.submit}
+            {t('addCustomers.btn.submit')}
           </Button>
         </div>
       </Form>
