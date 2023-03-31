@@ -3,6 +3,14 @@ const Customer = {
   addFiles: 'Thêm file từ excel',
   addCustomer: 'Thêm khách hàng',
 }
+const Table = {
+  stt: 'STT',
+  name: 'Full name',
+  phoneNumber: 'Phone Number',
+  staff: 'Staff in charge',
+  demand: 'Demand',
+  createdAt: 'Date Created',
+}
 const fullName = {
   label: 'Họ và tên',
   placeholder: 'Nhập họ và tên',
@@ -56,4 +64,5 @@ export {
   birthday,
   fullName,
   OPTIONSELECT,
+  Table,
 }

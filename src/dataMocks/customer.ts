@@ -1,6 +1,6 @@
 //type
-import Table from '@/constants/Customer'
-import { ICustomer } from '@/types/customer'
+import { Table } from '@/constants/Customer'
+import { ICustomer } from '@/types/Customer'
 import { ColumnsType } from 'antd/es/table'
 
 export const columns: ColumnsType<object> = [
