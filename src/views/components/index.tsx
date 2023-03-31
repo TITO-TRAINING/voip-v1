@@ -1,10 +1,10 @@
 import React from 'react'
-import AddCustomer from '@/views/pages/customer/components/AddCustomer'
+import EmptyCustomer from '@/views/customer/components/Empty'
 
 const Components = () => {
   return (
     <div>
-      <AddCustomer />
+      <EmptyCustomer />
     </div>
   )
 }
