@@ -4,7 +4,7 @@ import { Col, DatePicker, Form, Radio, Row, Select } from 'antd'
 import { Gender } from '@/types/gender'
 import Input from '@/components/common/Input'
 import Button from '@/components/common/Button'
-import { ICustomer } from '@/types/customer'
+import { ICustomer } from '@/types/Customer'
 
 //icon
 import { ReactComponent as AvatarGender } from '@/assets/icons/AvatarGender.svg'
