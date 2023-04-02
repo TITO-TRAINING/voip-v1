@@ -1,5 +1,6 @@
 import { memo, useCallback } from 'react'
-import { useTranslation } from 'react-i18next'
+import useTranslation from '@/hooks/useTranslation'
+
 //component
 import Button from '@/components/common/Button'
 import Empty from '@/components/common/Empty'

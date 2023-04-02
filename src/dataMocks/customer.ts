@@ -5,37 +5,37 @@ import { ColumnProps, ColumnsType } from 'antd/es/table'
 export const columns: ColumnProps<ColumnsType>[] = [
   {
     key: 'id',
-    title: 'table.stt',
+    title: 'stt',
     dataIndex: 'id',
     width: '5%',
   },
   {
     key: 'name',
-    title: 'table.name',
+    title: 'name',
     dataIndex: 'name',
     width: '25%',
   },
   {
     key: 'phoneNumber',
-    title: 'table.phoneNumber',
+    title: 'phoneNumber',
     dataIndex: 'phoneNumber',
     width: '15%',
   },
   {
     key: 'staff',
-    title: 'table.employeeSupport',
+    title: 'employeeSupport',
     dataIndex: 'staff',
     width: '20%',
   },
   {
     key: 'demand',
-    title: 'table.demand',
+    title: 'demand',
     dataIndex: 'demand',
     width: '15%',
   },
   {
     key: 'createdAt',
-    title: 'table.createdAt',
+    title: 'createdAt',
     dataIndex: 'createdAt',
     width: '15%',
   },

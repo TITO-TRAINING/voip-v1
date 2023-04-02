@@ -1,3 +1,1 @@
-const Demand = 'test'
-const formatDate = 'DD/MM/YYYY'
-export { Demand, formatDate }
+export const Demand = 'test'

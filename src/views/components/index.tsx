@@ -1,10 +1,10 @@
 import React from 'react'
+import useTranslation from '@/hooks/useTranslation'
 import Table from '@/components/common/Table'
 import { columns, data } from '@/dataMocks/customer'
-import { useTranslation } from 'react-i18next'
 
 const Components = () => {
-  const { t } = useTranslation('customer')
+  const { t } = useTranslation('table')
 
   return (
     <div>
