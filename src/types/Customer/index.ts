@@ -14,3 +14,9 @@ export interface ICustomer {
   createdAt: string
   staff?: string
 }
+
+export interface dataCustomerCall {
+  name: string
+  avatar?: string
+  phoneNumber: string
+}
