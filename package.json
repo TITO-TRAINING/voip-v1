@@ -87,9 +87,5 @@
     "src/**/*.{ts,tsx}": [
       "eslint --fix --max-warnings=0"
     ]
-  },
-  "main": "index.js",
-  "repository": "https://github.com/TITO-TRAINING/voip-v1.git",
-  "author": "Lanng21 <mailanbiun@gmail.com>",
-  "license": "MIT"
+  }
 }

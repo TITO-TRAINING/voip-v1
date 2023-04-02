@@ -1,2 +1,3 @@
-const OPTIONSELECT = 'test'
-export { OPTIONSELECT }
+const Demand = 'test'
+const formatDate = 'DD/MM/YYYY'
+export { Demand, formatDate }

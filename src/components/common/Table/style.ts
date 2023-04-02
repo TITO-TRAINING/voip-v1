@@ -15,9 +15,7 @@ const Table = styled(CustomTable)`
         background-color: ${(props) => props.theme.palette.grey.grey[100]};
       }
     }
-  }
-  tr.ant-table-row:hover > td {
-    .ant-table-cell-row-hover {
+    tr.ant-table-row:hover > td {
       background-color: ${(props) => props.theme.palette.primary.blue[50]};
     }
   }

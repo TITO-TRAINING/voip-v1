@@ -1,4 +1,5 @@
 import { memo, useCallback } from 'react'
+import { useTranslation } from 'react-i18next'
 //component
 import Button from '@/components/common/Button'
 import Empty from '@/components/common/Empty'
@@ -7,7 +8,6 @@ import Empty from '@/components/common/Empty'
 import emptyImg from '@/assets/icons/Client.svg'
 import { ReactComponent as AddCustomer } from '@/assets/icons/AddCustomer.svg'
 import { ReactComponent as FileImport } from '@/assets/icons/FileImport.svg'
-import { useTranslation } from 'react-i18next'
 
 const EmptyCustomer = () => {
   const { t } = useTranslation('customer')
