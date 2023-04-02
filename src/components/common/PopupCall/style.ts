@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Modal from 'antd/es/modal/Modal'
 
 const PopupCallCustom = styled(Modal)`
+  top: 25px;
   .ant-modal-title {
     display: flex;
     gap: 8px;
