@@ -48,8 +48,8 @@ const PopupCall: React.FC<PopupCallProps> = ({
     <>
       {children}
       <PopupCallCustom
-        width={360}
         closeIcon={<Close />}
+        width={360}
         open={open}
         title={<Header type={type} phoneNumber={phoneNumber} />}
         footer={
@@ -77,7 +77,7 @@ const PopupCall: React.FC<PopupCallProps> = ({
 PopupCall.defaultProps = {
   onOK: undefined,
   onCancel: undefined,
-  timing: undefined
+  timing: undefined,
 }
 
 export default memo(PopupCall)
