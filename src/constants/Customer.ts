@@ -51,6 +51,12 @@ const btn = {
   submit: 'Thêm khách hàng',
 }
 const OPTIONSELECT = 'test'
+
+const FAKE_DATA_CUSTOMER = {
+  name: 'Quoc Bao',
+  phoneNumber: '0326495191',
+}
+
 export {
   Customer,
   btn,
@@ -65,4 +71,5 @@ export {
   fullName,
   OPTIONSELECT,
   Table,
+  FAKE_DATA_CUSTOMER,
 }
