@@ -14,6 +14,7 @@ const theme = {
       paper: "#f6f7f8",
       divider: "#e9eaec",
       disabled: "#e8eaed",
+      primary: "#ECF7FD",
     },
     text: {
       primary: "#18191b",
