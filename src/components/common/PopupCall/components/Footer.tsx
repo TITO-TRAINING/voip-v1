@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
+import { STATE_CALL } from '@/constants/PopupCall'
 import Connected from './StateCall/Connected'
-import Disconnect from './StateCall/Disconnect'
 import Ring from './StateCall/Ring'
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   type: 'call to' | 'call away'
   onOK?: () => void
   onCancel?: () => void
-  timing?: string | undefined
+  timing?: string
   isConnected: boolean
 }
 
@@ -20,11 +20,13 @@ const Footer: React.FC<Props> = ({
   timing,
   isConnected,
 }) => {
+  const [{ typeOfState: ring }, { typeOfState: connected }] = STATE_CALL
+
   switch (state) {
-    case 'ring':
+    case ring:
       return <Ring type={type} onCancel={onCancel} onOK={onOK} />
 
-    case 'connected':
+    case connected:
       return (
         <>
           {isConnected && <p className='time'>{timing}</p>}
@@ -36,7 +38,7 @@ const Footer: React.FC<Props> = ({
       return (
         <>
           {isConnected && <p className='time'>{timing}</p>}
-          <Disconnect />
+          <p className='status'>Cuộc gọi đã kết thúc</p>
         </>
       )
   }
@@ -45,7 +47,7 @@ const Footer: React.FC<Props> = ({
 Footer.defaultProps = {
   onCancel: undefined,
   onOK: undefined,
-  timing: undefined
+  timing: undefined,
 }
 
 export default memo(Footer)

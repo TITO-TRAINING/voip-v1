@@ -25,7 +25,7 @@ const PopupCall: React.FC<PopupCallProps> = ({
   timing,
   customer,
 }) => {
-  const [stateCall, setStateCall] = useState('ring')
+  const [stateCall, setStateCall] = useState<string>('ring')
   const [isConnected, setIsConnected] = useState(false)
   const { name, avatar, phoneNumber } = customer
 

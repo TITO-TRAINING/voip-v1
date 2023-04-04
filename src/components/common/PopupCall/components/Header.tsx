@@ -7,7 +7,10 @@ interface Props {
 
 const Header: React.FC<Props> = ({ type, phoneNumber }) => {
   const day = new Date()
-  const timeStart = `${day.getHours()}:${day.getMinutes()}`
+  const hour = day.getHours().toString().padStart(2, '0')
+  const minute = day.getMinutes().toString().padStart(2, '0')
+
+  const timeStart = `${hour}:${minute}`
 
   return (
     <>

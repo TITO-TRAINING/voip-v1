@@ -19,9 +19,9 @@ const Content: React.FC<Props> = ({ type, name, avatar, phoneNumber }) => {
         <picture className='avatar'>
           <img src={avatar} alt='' />
         </picture>
-        <figure className='call--type'>
+        <picture className='call--type'>
           <img src={call} alt='' />
-        </figure>
+        </picture>
       </div>
       <div className='content__info'>
         <p className='phoneNumber'>{phoneNumber}</p>

@@ -10,16 +10,14 @@ const Connected: React.FC<Props> = ({ onCancel }) => {
     <>
       <p className='status'>Đã kết nối</p>
       <button onClick={onCancel}>
-        <figure>
-          <img src={cancel} alt='' />
-        </figure>
+        <img src={cancel} alt='' />
       </button>
     </>
   )
 }
 
 Connected.defaultProps = {
-  onCancel: undefined
+  onCancel: undefined,
 }
 
 export default memo(Connected)
