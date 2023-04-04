@@ -1,15 +1,17 @@
 import { memo, useCallback } from 'react'
+import useTranslation from '@/hooks/useTranslation'
+
 //component
 import Button from '@/components/common/Button'
 import Empty from '@/components/common/Empty'
-//constants
-import { Customer } from '@/constants/Customer'
+
 //icon
 import emptyImg from '@/assets/icons/Client.svg'
 import { ReactComponent as AddCustomer } from '@/assets/icons/AddCustomer.svg'
 import { ReactComponent as FileImport } from '@/assets/icons/FileImport.svg'
 
 const EmptyCustomer = () => {
+  const { t } = useTranslation('customer')
   const handleImport = useCallback(() => {
     //TODO: Implement handle Import excel button
     console.log('import')
@@ -22,14 +24,14 @@ const EmptyCustomer = () => {
 
   return (
     <div>
-      <Empty emptyImg={emptyImg} content={Customer.desEmptyCustomer}>
+      <Empty emptyImg={emptyImg} content={t('desEmptyCustomer')}>
         <Button onClick={handleImport} className='import'>
           <FileImport />
-          {Customer.addFiles}
+          {t('addFiles')}
         </Button>
         <Button onClick={handleAddCustomer} className='add'>
           <AddCustomer />
-          {Customer.addCustomer}
+          {t('addCustomer')}
         </Button>
       </Empty>
     </div>
