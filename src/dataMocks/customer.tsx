@@ -2,7 +2,26 @@
 import { Table } from '@/constants/Customer'
 import { ICustomer } from '@/types/Customer'
 import { ColumnsType } from 'antd/es/table'
+import { SortAscendingOutlined } from "@ant-design/icons";
+import DropdownCustom from '@/components/common/DropDown';
+import styled from 'styled-components';
+import { Menu } from 'antd';
+import items from '@/constants/fakeItemPopupAction';
 
+
+export const MenuCustom = styled(Menu)`
+ &.ant-dropdown-menu{
+  border-radius: 8px;
+  padding: 4px 4px;
+  min-width: 280px;
+ }
+ &.ant-dropdown-menu .ant-dropdown-menu-item:hover{
+  border-radius: 8px;
+  background-color: ${({ theme }) => theme.palette.background.primary};
+}
+`;
+
+const menu = <MenuCustom items={items} />;
 export const columns: ColumnsType<object> = [
   {
     key: 'id',
@@ -12,9 +31,14 @@ export const columns: ColumnsType<object> = [
   },
   {
     key: 'name',
-    title: Table.name,
+    title: (
+      <div style={{ display: "flex", alignItems: "center" }}>
+        {Table.name} <SortAscendingOutlined style={{ marginLeft: "8px" }} />
+      </div>
+    ),
     dataIndex: 'name',
     width: '25%',
+    sorter: (a: any, b: any) => a.name.localeCompare(b.name),
   },
   {
     key: 'phoneNumber',
@@ -45,6 +69,13 @@ export const columns: ColumnsType<object> = [
     title: '',
     dataIndex: 'nullColums',
     width: '5%',
+    render: () => {
+      return (
+        <DropdownCustom overlay={menu} trigger={["click"]}>
+          <p>More</p>
+        </DropdownCustom>
+      );
+    },
   },
 ]
 export const data: ICustomer[] = [
