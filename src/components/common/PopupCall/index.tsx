@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Content from './components/Content'
 import { dataCustomerCall } from '@/types/Customer'
+import { DATA_STATE_CALL } from '@/constants/popupCall'
 import { ReactComponent as Close } from '@/assets/icons/Close.svg'
 import PopupCallCustom from './style'
 
@@ -25,7 +26,7 @@ const PopupCall: React.FC<PopupCallProps> = ({
   timing,
   customer,
 }) => {
-  const [stateCall, setStateCall] = useState<string>('ring')
+  const [stateCall, setStateCall] = useState<string>(DATA_STATE_CALL.ring)
   const [isConnected, setIsConnected] = useState(false)
   const { name, avatar, phoneNumber } = customer
 
@@ -33,7 +34,7 @@ const PopupCall: React.FC<PopupCallProps> = ({
     if (onOK) {
       onOK()
     }
-    setStateCall('connected')
+    setStateCall(DATA_STATE_CALL.connected)
     setIsConnected(true)
   }, [onOK])
 
@@ -41,7 +42,7 @@ const PopupCall: React.FC<PopupCallProps> = ({
     if (onCancel) {
       onCancel()
     }
-    setStateCall('disconnect')
+    setStateCall(DATA_STATE_CALL.disconnect)
   }, [onCancel])
 
   return (

@@ -11,7 +11,7 @@ const Components = () => {
   }, [])
 
   return (
-    <PopupCall open={open} type='call to' customer={FAKE_DATA_CUSTOMER}>
+    <PopupCall open={open} type='call away' customer={FAKE_DATA_CUSTOMER}>
       <Button onClick={isOpen}>Call me!</Button>
     </PopupCall>
   )

@@ -1,3 +1,4 @@
+import { DATA_TYPE_OF_CALL } from '@/constants/popupCall'
 import React, { memo } from 'react'
 
 interface Props {
@@ -14,7 +15,7 @@ const Header: React.FC<Props> = ({ type, phoneNumber }) => {
 
   return (
     <>
-      {type === 'call away' && <p className='title phone'>{phoneNumber}</p>}
+      {type === DATA_TYPE_OF_CALL.callAway && <p className='title phone'>{phoneNumber}</p>}
       <p className='title'>Cuộc gọi đến {timeStart}</p>
     </>
   )

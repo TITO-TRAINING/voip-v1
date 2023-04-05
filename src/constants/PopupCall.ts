@@ -1,25 +1,12 @@
-export const STATE_CALL = [
-  {
-    id: 1,
-    typeOfState: 'ring',
-  },
-  {
-    id: 2,
-    typeOfState: 'connected',
-  },
-  {
-    id: 3,
-    typeOfState: 'disconnect',
-  },
-]
+import { stateCall, typeOfCall } from '@/types/popupCall'
 
-export const TYPE_OF_CALL = [
-  {
-    id: 1,
-    typeOfCall: 'call to',
-  },
-  {
-    id: 2,
-    typeOfCall: 'call away',
-  },
-]
+export const DATA_STATE_CALL: stateCall = {
+  ring: 'ring',
+  connected: 'connected',
+  disconnect: 'disconnect',
+}
+
+export const DATA_TYPE_OF_CALL: typeOfCall = {
+  callTo: 'call to',
+  callAway: 'call away',
+}

@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
-import { STATE_CALL } from '@/constants/PopupCall'
 import Connected from './StateCall/Connected'
 import Ring from './StateCall/Ring'
+import { DATA_STATE_CALL } from '@/constants/popupCall'
 
 interface Props {
   state: string
@@ -20,13 +20,11 @@ const Footer: React.FC<Props> = ({
   timing,
   isConnected,
 }) => {
-  const [{ typeOfState: ring }, { typeOfState: connected }] = STATE_CALL
-
   switch (state) {
-    case ring:
+    case DATA_STATE_CALL.ring:
       return <Ring type={type} onCancel={onCancel} onOK={onOK} />
 
-    case connected:
+    case DATA_STATE_CALL.connected:
       return (
         <>
           {isConnected && <p className='time'>{timing}</p>}

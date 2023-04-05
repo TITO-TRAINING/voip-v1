@@ -2,6 +2,7 @@ import React, { memo } from 'react'
 import callTo from '@/assets/images/callTo.svg'
 import callAway from '@/assets/images/callAway.svg'
 import avatarDefault from '@/assets/images/man.svg'
+import { DATA_TYPE_OF_CALL } from '@/constants/popupCall'
 
 interface Props {
   type: 'call to' | 'call away'
@@ -11,7 +12,7 @@ interface Props {
 }
 
 const Content: React.FC<Props> = ({ type, name, avatar, phoneNumber }) => {
-  const call = type === 'call to' ? callTo : callAway
+  const call = type === DATA_TYPE_OF_CALL.callTo ? callTo : callAway
 
   return (
     <>

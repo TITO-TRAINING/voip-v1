@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
-import { TYPE_OF_CALL } from '@/constants/PopupCall'
 import cancel from '@/assets/images/cancel.svg'
 import answer from '@/assets/images/answer.svg'
+import { DATA_TYPE_OF_CALL } from '@/constants/popupCall'
 
 interface Props {
   type: 'call to' | 'call away'
@@ -10,10 +10,8 @@ interface Props {
 }
 
 const Ring: React.FC<Props> = ({ type, onCancel, onOK }) => {
-  const [{ typeOfCall: callTo }] = TYPE_OF_CALL
-
   switch (type) {
-    case callTo:
+    case DATA_TYPE_OF_CALL.callTo:
       return (
         <div className='footer__button'>
           <button onClick={onCancel}>
