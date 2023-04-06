@@ -60,6 +60,7 @@ const CustomSidebar = styled.div`
         color: rgb(16 123 188);
       }
     }
+
     .ant-menu-item {
       &:hover {
         svg {
@@ -73,6 +74,7 @@ const CustomSidebar = styled.div`
         }
       }
     }
+
     .ant-menu-submenu-selected {
       &:hover {
         font-weight: 700;
@@ -84,16 +86,19 @@ const CustomSidebar = styled.div`
         }
       }
     }
+
     .ant-menu-title-content {
       &:hover {
         font-weight: 700;
         color: rgb(16 123 188);
       }
     }
+
     .ant-menu-submenu-selected {
       font-weight: 700;
       color: rgb(16 123 188);
     }
+
     .ant-menu-title-content {
       margin-left: 12px;
     }

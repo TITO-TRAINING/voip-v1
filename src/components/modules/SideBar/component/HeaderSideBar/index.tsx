@@ -22,7 +22,6 @@ const HeaderSidebar: React.FC<HeaderSidebarProps> = ({
       <Row className={isCollapse ? 'header-sidebar logo' : 'header-sidebar'}>
         <Col span={16} className='sidebar-logo'>
           <img className='logo-image' src={Logo} alt='logo' />
-
           {!isCollapse && <Text>{company}</Text>}
         </Col>
         <Col span={8} className='sidebar-button-collapsed'>
