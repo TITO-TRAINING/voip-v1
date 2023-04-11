@@ -10,7 +10,6 @@ const CustomHeaderSidebar = styled.div`
   .header-sidebar {
     padding: 0 8px;
     background-color: ${({ theme }) => theme.palette.common.white};
-
     .sidebar-button-collapsed {
       display: flex;
       justify-content: end;
@@ -44,6 +43,14 @@ const CustomHeaderSidebar = styled.div`
       flex-direction: column;
       gap: 8px;
       max-width: unset;
+    }
+    .header-sidebar-title {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.75rem;
+      color: rgb(16 123 188);
+      margin-top: 8px;
     }
   }
 `
