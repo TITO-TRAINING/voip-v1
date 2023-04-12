@@ -1,0 +1,39 @@
+
+<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path
+     fillRule="evenodd"
+     clipRule="evenodd"
+     d="M2.5 5.41667C2.5 3.22899 2.52342 2.5 5.41667 2.5C8.30991 2.5 8.33333 3.22899 8.33333 5.41667C8.33333 7.60434 8.34256 8.33333 5.41667 8.33333C2.49077 8.33333 2.5 7.60434 2.5 5.41667Z"
+     stroke="currentColor"
+     strokeWidth="1.5"
+     strokeLinecap="round"
+     strokeLinejoin="round"
+  />
+  <path
+     fillRule="evenodd"
+     clipRule="evenodd"
+     d="M11.6667 5.41667C11.6667 3.22899 11.6902 2.5 14.5834 2.5C17.4767 2.5 17.5001 3.22899 17.5001 5.41667C17.5001 7.60434 17.5093 8.33333 14.5834 8.33333C11.6575 8.33333 11.6667 7.60434 11.6667 5.41667Z"
+     stroke="currentColor"
+     strokeWidth="1.5"
+     strokeLinecap="round"
+     strokeLinejoin="round"
+  />
+  <path
+     fillRule="evenodd"
+     clipRule="evenodd"
+     d="M2.5 14.5827C2.5 12.395 2.52342 11.666 5.41667 11.666C8.30991 11.666 8.33333 12.395 8.33333 14.5827C8.33333 16.7704 8.34256 17.4993 5.41667 17.4993C2.49077 17.4993 2.5 16.7704 2.5 14.5827Z"
+     stroke="currentColor"
+     strokeWidth="1.5"
+     strokeLinecap="round"
+     strokeLinejoin="round"
+  />
+  <path
+     fillRule="evenodd"
+     clipRule="evenodd"
+     d="M11.6667 14.5827C11.6667 12.395 11.6902 11.666 14.5834 11.666C17.4767 11.666 17.5001 12.395 17.5001 14.5827C17.5001 16.7704 17.5093 17.4993 14.5834 17.4993C11.6575 17.4993 11.6667 16.7704 11.6667 14.5827Z"
+     stroke="currentColor"
+     strokeWidth="1.5"
+     strokeLinecap="round"
+     strokeLinejoin="round"
+  />
+</svg>
