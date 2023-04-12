@@ -1,42 +1,41 @@
 //type
-import { Table } from '@/constants/Customer'
 import { ICustomer } from '@/types/Customer'
-import { ColumnsType } from 'antd/es/table'
+import { ColumnProps, ColumnsType } from 'antd/es/table'
 
-export const columns: ColumnsType<object> = [
+export const columns: ColumnProps<ColumnsType>[] = [
   {
     key: 'id',
-    title: Table.stt,
+    title: 'stt',
     dataIndex: 'id',
     width: '5%',
   },
   {
     key: 'name',
-    title: Table.name,
+    title: 'name',
     dataIndex: 'name',
     width: '25%',
   },
   {
     key: 'phoneNumber',
-    title: Table.phoneNumber,
+    title: 'phoneNumber',
     dataIndex: 'phoneNumber',
     width: '15%',
   },
   {
     key: 'staff',
-    title: Table.staff,
+    title: 'employeeSupport',
     dataIndex: 'staff',
     width: '20%',
   },
   {
     key: 'demand',
-    title: Table.demand,
+    title: 'demand',
     dataIndex: 'demand',
     width: '15%',
   },
   {
     key: 'createdAt',
-    title: Table.createdAt,
+    title: 'createdAt',
     dataIndex: 'createdAt',
     width: '15%',
   },
@@ -47,6 +46,7 @@ export const columns: ColumnsType<object> = [
     width: '5%',
   },
 ]
+
 export const data: ICustomer[] = [
   {
     id: 1,
