@@ -3,6 +3,12 @@ import RootPrivatePage from './RootPrivatePage'
 import Components from '@/views/components'
 import Dashboard from '@/views/dashboard'
 import Empty from '@/views/customer/components/Empty'
+import AddCustomer from '@/views/customer/components/AddCustomer'
+
+const onClose = () => {
+  // TODO: Implement handle onClose
+  console.log('onClose')
+}
 
 export const routes = (): RouteObject[] => [
   {
@@ -23,7 +29,7 @@ export const routes = (): RouteObject[] => [
         path: 'tickets',
         element: (
           //TODO: add tickets page
-          <Empty />
+          <AddCustomer onClose={onClose} />
           // test component
         ),
       },

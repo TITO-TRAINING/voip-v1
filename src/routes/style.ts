@@ -6,9 +6,14 @@ const RootPageCustom = styled.div`
     background-color: ${({ theme }) => theme.palette.background.paper};
     overflow: hidden;
     width: 100%;
-
+    height: 100vh;
     .sidebar {
+      flex: 0 0 auto;
       z-index: 50;
+    }
+    .content {
+      flex: 1;
+      height: 100%;
     }
   }
 `
