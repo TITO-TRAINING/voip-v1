@@ -1,9 +1,11 @@
 import React, { memo, useCallback, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import useTranslation from '@/hooks/useTranslation'
 import { Layout, Menu } from 'antd'
 import { CaretDownOutlined, CaretRightOutlined } from '@ant-design/icons'
 import type { RenderIconInfo } from 'rc-menu/lib/interface'
 import HeaderSidebar from './component/HeaderSideBar'
+import { PATH } from '@/constants/path'
 import getItem from './utils'
 import CustomSidebar from './style'
 
@@ -22,6 +24,8 @@ import {
 const { Sider } = Layout
 
 const Sidebar: React.FC = () => {
+  const navigate = useNavigate()
+
   const [collapsed, setCollapsed] = useState<boolean>(false)
 
   const toggleCollapsed = useCallback(() => {
@@ -34,19 +38,23 @@ const Sidebar: React.FC = () => {
     []
   )
 
+  const handleChangeTab = (path: string) => {
+    navigate(path)
+  }
+
   const { t } = useTranslation('sideBar')
 
   const items = [
-    getItem(t('ticket'), '1', <Ticket />),
-    getItem(t('customer'), '2', <ClientCustomer />),
-    getItem(t('contact'), '3', <Communicate />),
-    getItem(t('integrated'), '4', <Integration />),
-    getItem(t('callCenter'), 'sub1', <Call />, [
-      getItem(t('callHistory'), '5'),
+    getItem(t('ticket'), PATH.TICKET, <Ticket />),
+    getItem(t('customer'), PATH.CUSTOMER, <ClientCustomer />),
+    getItem(t('contact'), PATH.CONTACTS, <Communicate />),
+    getItem(t('integrated'), PATH.INTEGRATE, <Integration />),
+    getItem(t('callCenter'), PATH.CALL_HISTORY, <Call />, [
+      getItem(t('callHistory'), PATH.CALL_HISTORY),
     ]),
-    getItem(t('employee'), '6', <Employee />),
-    getItem(t('statistical'), '7', <Statistics />),
-    getItem(t('config'), '8', <Setting />),
+    getItem(t('employee'), PATH.STAFFS, <Employee />),
+    getItem(t('statistical'), PATH.STATISTICS, <Statistics />),
+    getItem(t('config'), PATH.SETTINGS, <Setting />),
   ]
 
   return (
@@ -62,6 +70,7 @@ const Sidebar: React.FC = () => {
           toggleCollapsed={toggleCollapsed}
         />
         <Menu
+          onClick={({ key }) => handleChangeTab(key)}
           mode='inline'
           theme='light'
           items={items}
