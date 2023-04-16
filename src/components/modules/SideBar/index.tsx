@@ -13,6 +13,14 @@ const { Sider } = Layout
 const Sidebar: React.FC = () => {
   const navigate = useNavigate()
 
+  const { t } = useTranslation('sideBar')
+
+  const translator = (keyTranslate: string) => {
+    return t(keyTranslate)
+  }
+
+  const generatedMenus = generateMenu(translator)
+
   const [collapsed, setCollapsed] = useState<boolean>(false)
 
   const handleChangeTab = (path: string) => {
@@ -29,18 +37,11 @@ const Sidebar: React.FC = () => {
     []
   )
 
-  const { t } = useTranslation('sideBar')
-
-  const translator = (keyTranslate: string) => {
-    return t(keyTranslate)
-  }
-
-  const generatedMenus = generateMenu(translator)
-
   return (
     <CustomSidebar>
       <Sider
         className='sidebar'
+        //Set to null to hide the trigger to customize the toggle button
         trigger={null}
         collapsible
         collapsed={collapsed}
