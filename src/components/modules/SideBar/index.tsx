@@ -6,11 +6,18 @@ import type { RenderIconInfo } from 'rc-menu/lib/interface'
 import HeaderSidebar from './component/HeaderSideBar'
 import { generateMenu } from './utils'
 import CustomSidebar from './style'
+import { useNavigate } from 'react-router-dom'
 
 const { Sider } = Layout
 
 const Sidebar: React.FC = () => {
+  const navigate = useNavigate()
+
   const [collapsed, setCollapsed] = useState<boolean>(false)
+
+  const handleChangeTab = (path: string) => {
+    navigate(path)
+  }
 
   const toggleCollapsed = useCallback(() => {
     setCollapsed((prevState) => !prevState)
@@ -43,6 +50,7 @@ const Sidebar: React.FC = () => {
           toggleCollapsed={toggleCollapsed}
         />
         <Menu
+          onClick={({ key }) => handleChangeTab(key)}
           mode='inline'
           theme='light'
           items={generatedMenus}

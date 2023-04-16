@@ -13,6 +13,17 @@ const CustomSidebar = styled.div`
   .menu-sidebar {
     border-right: none;
     margin-top: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #000;
+      border-radius: 6px;
+    }
 
     .ant-menu-item,
     .ant-menu-submenu-title {
