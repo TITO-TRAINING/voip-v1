@@ -1,23 +1,12 @@
 import React from 'react'
-import useTranslation from '@/hooks/useTranslation'
-import Table from '@/components/common/Table'
-import { columns, data } from '@/dataMocks/customer'
+import Department from '@/components/common/Department'
+import { DATA_DEPARTMENT } from '@/constants/department'
+import { STATE_DEPARTMENT } from '@/constants/department'
 
 const Components = () => {
-  const { t } = useTranslation('table')
-
   return (
     <div>
-      <Table dataSource={data}>
-        {columns.map((column) => (
-          <Table.Column
-            key={column.key}
-            title={t(`${column.title}`)}
-            dataIndex={column.dataIndex}
-            width={column.width}
-          />
-        ))}
-      </Table>
+      <Department department={DATA_DEPARTMENT} state={STATE_DEPARTMENT.deActive} onOK={undefined}/>
     </div>
   )
 }
