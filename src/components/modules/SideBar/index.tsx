@@ -4,8 +4,8 @@ import { Layout, Menu } from 'antd'
 import { CaretDownOutlined, CaretRightOutlined } from '@ant-design/icons'
 import type { RenderIconInfo } from 'rc-menu/lib/interface'
 import HeaderSidebar from './component/HeaderSideBar'
-import { generateMenu } from './utils'
 import CustomSidebar from './style'
+import { generateMenu } from '@/constants/itemSidebar'
 
 const { Sider } = Layout
 

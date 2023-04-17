@@ -1,10 +1,10 @@
 import React, { memo } from 'react'
 import { RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons'
 import { Col, Row } from 'antd'
-import { company } from '@/constants/common'
 import Button from '@/components/common/Button'
 import CustomHeaderSidebar from './style'
 import Logo from '@/assets/images/logoSideBar.png'
+import ENV from '@/constants/env'
 
 interface HeaderSidebarProps {
   toggleCollapsed: () => void
@@ -20,7 +20,9 @@ const HeaderSidebar: React.FC<HeaderSidebarProps> = ({
       <Row className={isCollapse ? 'header-sidebar logo' : 'header-sidebar'}>
         <Col span={16} className='sidebar-logo'>
           <img className='logo-image' src={Logo} alt='logo' />
-          {!isCollapse && <p className='header-sidebar-title'>{company}</p>}
+          {!isCollapse && (
+            <p className='header-sidebar-title'>{ENV.LOGO_COMPANY}</p>
+          )}
         </Col>
         <Col span={8} className='sidebar-button-collapsed'>
           <Button onClick={toggleCollapsed}>
