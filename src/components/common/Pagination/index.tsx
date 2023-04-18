@@ -4,7 +4,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons'
 import Pagination from './style'
 import { PaginationType } from '@/types/Pagination' 
 
-const itemRender: PaginationProps['itemRender'] = (
+ export const itemRender: PaginationProps['itemRender'] = (
   _,
   type,
   originalElement
@@ -13,14 +13,14 @@ const itemRender: PaginationProps['itemRender'] = (
     return (
       <div>
         <ArrowLeftOutlined />
-        <a href="/#" className='text--changePage'>Trang trước</a>
+        <span style={{color:'black'}} className='text--changePage'>Trang trước</span>
       </div>
     )
   }
   if (type === 'next') {
     return (
       <div>
-        <a href="/#" className='text--changePage'>Trang tiếp theo</a>
+        <span style={{color:'black'}} className='text--changePage'>Trang tiếp theo</span>
         <ArrowRightOutlined />
       </div>
     )
@@ -44,7 +44,7 @@ const PaginationCustom: React.FC<PaginationType> = ({ total, pageSize }) => {
       total={total}
       onChange={onChange}
       itemRender={itemRender}
-      pageSize={pageSize}
+      // pageSize={pageSize}
     />
   )
 }

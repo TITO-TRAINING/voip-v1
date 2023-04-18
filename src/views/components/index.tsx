@@ -2,14 +2,15 @@ import React from 'react'
 import useTranslation from '@/hooks/useTranslation'
 import Table from '@/components/common/Table'
 import { columns, data } from '@/dataMocks/customer'
-import PaginationCustom from '@/components/common/Pagination'
+import  { itemRender } from '@/components/common/Pagination'
 
 const Components = () => {
   const { t } = useTranslation('table')
+  
   return (
     <div>
       
-      <Table dataSource={data} pagination={false}>
+      <Table dataSource={data} pagination={{itemRender:itemRender}}>
         {columns.map((column) => (
           <Table.Column
             key={column.key}
@@ -19,11 +20,6 @@ const Components = () => {
           />
         ))}
       </Table>
-      {
-        data.length / 10 > 1 && (
-          <PaginationCustom total={data.length} pageSize={10}  />
-        )
-      }
     </div>
   )
 }
